@@ -134,6 +134,41 @@
           }
         }
       }
+    },
+    "ng-trc-lib": {
+      "root": "projects/ng-trc-lib",
+      "sourceRoot": "projects/ng-trc-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-trc-lib/tsconfig.lib.json",
+            "project": "projects/ng-trc-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-trc-lib/src/test.ts",
+            "tsConfig": "projects/ng-trc-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-trc-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-trc-lib/tsconfig.lib.json",
+              "projects/ng-trc-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ng-trc"

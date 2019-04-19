@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ng-trc-lib": [
+        "dist/ng-trc-lib"
+      ],
+      "ng-trc-lib/*": [
+        "dist/ng-trc-lib/*"
+      ]
+    }
   }
 }
