@@ -1,5 +1,7 @@
 # Create and publish Angular library
 
+This is the repository for the story https://medium.com/@simionrazvan/create-and-publish-an-angular-library-dd07a24c06c 
+
 # Init angular-cli project
 
 ng new ng-trc
